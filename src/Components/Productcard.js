@@ -19,7 +19,7 @@ const Productcard = (props) => {
       {product.promotional_price ? product.promotional_price : product.price}
       </div>
       <div>
-      {product.price}
+      {product.price ? product.price : product.promotional_price}
       </div>
       <button>comprar</button>
     </div>
