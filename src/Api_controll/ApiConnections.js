@@ -31,7 +31,7 @@ const getcategories = async () => {
 
   const getproductbyid = async (id) => {
     try {
-      let url = `https://www.eva-test-api.plataformaeva.com/product${id}`
+      let url = `https://www.eva-test-api.plataformaeva.com/product/${id}`
       const response = await fetch(url)
       return response.json();
     } catch(error) {
