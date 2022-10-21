@@ -9,10 +9,10 @@ const Destaquebycat = (props) => {
     categorietoproductmap(products, allproducts);
   }, [products, allproducts]);
 
-  const categorietoproductmap = (products, allproducts) => {
+  const categorietoproductmap = async (products, allproducts) => {
     const mainprodcs = [];
 
-    products.map((prod) => {
+    await products.map((prod) => {
       return allproducts.map((allprod) => {
         if (allprod.id === prod.id) {
           mainprodcs.push(allprod);
@@ -27,9 +27,11 @@ const Destaquebycat = (props) => {
   return (
     <div>
       <h3>{categorie}</h3>
-      {productsbycatdestac.map((product, index) => {
-        return <Productcard key={index} product={product} />;
-      })}
+      {productsbycatdestac
+        ? productsbycatdestac.map((product, index) => {
+            return <Productcard key={index} product={product} />;
+          })
+        : "carregando"}
     </div>
   );
 };
