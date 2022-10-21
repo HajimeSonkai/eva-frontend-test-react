@@ -4,7 +4,6 @@ import rater from "../Extras/Starrater";
 const Productcard = (props) => {
   const { product } = props;
   const imgsrc = product.images_product.map((img) => {return img.path})
-  // console.log(imgsrc)
   
   return (
     <div className="product-card">
