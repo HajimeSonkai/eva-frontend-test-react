@@ -3,6 +3,7 @@ import Destaque from "./Components/Destaque";
 import Destaquebycat from "./Components/Destaquebycat";
 import { getcategories, getproducts } from "./Api_controll/ApiConnections";
 import "./App.css";
+import Header from "./Components/Header";
 
 function App() {
   const [categories, setcategories] = useState();
@@ -58,13 +59,9 @@ function App() {
 
   return (
     <div className="App">
-      <div>Hello World!</div>
+      {<Header categories={categories}/>}
       <div>
-        {categories
-          ? categories.map((categorie, index) => {
-              return <div key={index}>{categorie.name}</div>;
-            })
-          : "carregando"}
+        
       </div>
       <div className="destaques">
         {products ? <Destaque products={products} /> : "carregando"}
