@@ -342,6 +342,21 @@ font-weight: 700;
 color: rgba(225, 19, 131, 1);
 }
 
+.buy-btn {
+    background-color: rgba(225, 19, 131, 1);
+    border-radius: 10px;
+    border: none;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+
 .arrow-left,
 .arrow-right {
   position: relative;

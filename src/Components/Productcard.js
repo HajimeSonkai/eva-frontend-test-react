@@ -25,7 +25,7 @@ const Productcard = (props) => {
       {`R$ ${product.promotional_price ? Number(product.promotional_price).toFixed(2) : Number(product.price).toFixed(2)}`}
       </p>
       <p>{`ou R$ ${porcento} com 10% off no boleto`}</p>
-      <button>comprar</button>
+      <button className="buy-btn">comprar</button>
     </div>
   );
 };
