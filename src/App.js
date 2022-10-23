@@ -59,14 +59,41 @@ function App() {
 
   return (
     <div className="App">
-      {<Header categories={categories}/>}
+      {<Header categories={categories} />}
       <div className="app-body">
+        <div className="categorie-container">
+          <div className="categorie-box">
+            <img
+              className="categorie-img"
+              alt="categoria 1"
+              src={require("./images/category-1.jpeg")}
+              />
+              <p>Livros</p>
+          </div>
+          <div className="categorie-box">
+            <img
+              className="categorie-img"
+              alt="categoria 1"
+              src={require("./images/category-2.jpeg")}
+            />
+            <p>Escritório</p>
+          </div>
+          <div className="categorie-box">
+            <img
+              className="categorie-img"
+              alt="categoria 1"
+              src={require("./images/category-3.jpeg")}
+            />
+            <p>Vestuário</p>
+          </div>
+        </div>
+
         {products ? <Destaque products={products} /> : "carregando"}
-        
+
         {categoriesdestacs
           ? categoriesdestacs.map((categorie, index) => {
               return (
-                <div className={`destaques`} key={index}>
+                <div key={index}>
                   <Destaquebycat
                     products={categorie[2]}
                     categorie={categorie[1]}
@@ -77,7 +104,7 @@ function App() {
             })
           : "carregando"}
       </div>
-      </div>
+    </div>
   );
 }
 

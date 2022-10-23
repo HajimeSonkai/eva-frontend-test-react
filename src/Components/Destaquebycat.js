@@ -38,9 +38,12 @@ const Destaquebycat = (props) => {
 
   return (
     <div>
-      <h3>{categorie}</h3>
     <div className="container">
-      <button className="arrow-left" onClick={slideLeft}>{"<"}</button>
+      <h1 className="titulo">{`Destaques em ${categorie}`}</h1>
+      {productsbycatdestac ? (productsbycatdestac.length >4) ? <button className="arrow-left" onClick={slideLeft}>{"<"}</button> : null
+      :null
+      }
+      {}
       <div id={categorie} className="gallery-wrapper">
         <div className="gallery">
           {productsbycatdestac
@@ -50,7 +53,9 @@ const Destaquebycat = (props) => {
             : "carregando"}
         </div>
       </div>
-            <button className="arrow-right" onClick={slideRight}>{">"}</button>
+      {productsbycatdestac ? (productsbycatdestac.length >4) ? <button className="arrow-right" onClick={slideRight}>{">"}</button> : null
+      :null
+      }
     </div>
         
       </div>
