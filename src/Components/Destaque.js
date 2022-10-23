@@ -17,8 +17,8 @@ const Destaque = (props) => {
   const { products } = props;
   return (
     <div>
-      <h3>Destaques</h3>
     <div className="container">
+      <h1 className="titulo">Destaques</h1>
       <button className="arrow-left" onClick={slideLeft} >{"<"}</button>
       <div id="destaque" className="gallery-wrapper">
         <div className="gallery">
