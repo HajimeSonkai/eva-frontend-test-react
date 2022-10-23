@@ -230,3 +230,67 @@ line-height: 19px;
 text-align: center;
 color: rgba(225, 19, 131, 1);
 }
+
+.container {
+  position: relative;
+  padding: 15px;
+  max-width: 1800px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+  height: 700px;
+  scroll-behavior: smooth;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+  height: 550px;
+}
+
+.product-img {
+  height: 100%;
+  border: 20px black;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 50px;
+  line-height: 250px;
+  width: 40px;
+  color: rgba(225, 19, 131, 1);
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, black 800%);
+  cursor: pointer;
+  border: none;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
+
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: right;
+  background: linear-gradient(to right, transparent 0%, black 800%);
+}

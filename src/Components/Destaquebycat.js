@@ -2,6 +2,18 @@ import React, { useEffect, useState } from "react";
 import Productcard from "./Productcard";
 
 const Destaquebycat = (props) => {
+  const slideLeft = () => {
+    const slider = document.getElementById(categorie)
+    console.log(slider)
+    slider.scrollBy(-500, 0)
+  }
+
+  const slideRight = () => {
+    const slider = document.getElementById(categorie)
+    console.log(slider)
+    slider.scrollBy(500, 0)
+  }
+
   const { products, categorie, allproducts } = props;
   const [productsbycatdestac, setproductsbycatdestac] = useState();
 
@@ -27,12 +39,21 @@ const Destaquebycat = (props) => {
   return (
     <div>
       <h3>{categorie}</h3>
-      {productsbycatdestac
-        ? productsbycatdestac.map((product, index) => {
-            return <Productcard key={index} product={product} />;
-          })
-        : "carregando"}
+    <div className="container">
+      <button className="arrow-left" onClick={slideLeft}>{"<"}</button>
+      <button className="arrow-right" onClick={slideRight}>{">"}</button>
+      <div id={categorie} className="gallery-wrapper">
+        <div className="gallery">
+          {productsbycatdestac
+            ? productsbycatdestac.map((product, index) => {
+                return <Productcard key={index} product={product} />;
+              })
+            : "carregando"}
+        </div>
+      </div>
     </div>
+        
+      </div>
   );
 };
 
