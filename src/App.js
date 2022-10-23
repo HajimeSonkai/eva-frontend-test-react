@@ -60,13 +60,9 @@ function App() {
   return (
     <div className="App">
       {<Header categories={categories}/>}
-      <div>
-        
-      </div>
-      <div className="destaques">
+      <div className="app-body">
         {products ? <Destaque products={products} /> : "carregando"}
-      </div>
-      <div>
+        
         {categoriesdestacs
           ? categoriesdestacs.map((categorie, index) => {
               return (
@@ -81,7 +77,7 @@ function App() {
             })
           : "carregando"}
       </div>
-    </div>
+      </div>
   );
 }
 
