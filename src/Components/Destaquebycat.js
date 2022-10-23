@@ -5,13 +5,13 @@ const Destaquebycat = (props) => {
   const slideLeft = () => {
     const slider = document.getElementById(categorie)
     console.log(slider)
-    slider.scrollBy(-500, 0)
+    slider.scrollBy(-1000, 0)
   }
 
   const slideRight = () => {
     const slider = document.getElementById(categorie)
     console.log(slider)
-    slider.scrollBy(500, 0)
+    slider.scrollBy(1000, 0)
   }
 
   const { products, categorie, allproducts } = props;

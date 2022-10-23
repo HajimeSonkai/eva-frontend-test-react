@@ -6,8 +6,9 @@ const Productcard = (props) => {
   const imgsrc = product.images_product.map((img) => {return img.path})
   
   return (
-    <div className="product-card">
-      <img alt={product.name} src={imgsrc}></img>
+    <div className={`item`}>
+      
+      <img className="product-img" alt={product.name} src={imgsrc}></img>
       <div>
       {product.name}
       </div>
