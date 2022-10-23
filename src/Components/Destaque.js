@@ -20,7 +20,6 @@ const Destaque = (props) => {
       <h3>Destaques</h3>
     <div className="container">
       <button className="arrow-left" onClick={slideLeft} >{"<"}</button>
-      <button className="arrow-right" onClick={slideRight}>{">"}</button>
       <div id="destaque" className="gallery-wrapper">
         <div className="gallery">
           {products.map((product, index) => {
@@ -28,6 +27,7 @@ const Destaque = (props) => {
           })}
         </div>
       </div>
+          <button className="arrow-right" onClick={slideRight}>{">"}</button>
     </div>
 
     </div>

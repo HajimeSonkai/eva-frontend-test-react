@@ -41,16 +41,16 @@ const Destaquebycat = (props) => {
       <h3>{categorie}</h3>
     <div className="container">
       <button className="arrow-left" onClick={slideLeft}>{"<"}</button>
-      <button className="arrow-right" onClick={slideRight}>{">"}</button>
       <div id={categorie} className="gallery-wrapper">
         <div className="gallery">
           {productsbycatdestac
             ? productsbycatdestac.map((product, index) => {
-                return <Productcard key={index} product={product} />;
-              })
+              return <Productcard key={index} product={product} />;
+            })
             : "carregando"}
         </div>
       </div>
+            <button className="arrow-right" onClick={slideRight}>{">"}</button>
     </div>
         
       </div>

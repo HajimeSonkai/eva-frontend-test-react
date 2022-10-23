@@ -232,6 +232,8 @@ color: rgba(225, 19, 131, 1);
 }
 
 .container {
+  display: flex;
+  flex-flow: row nowrap;
   position: relative;
   padding: 15px;
   max-width: 1800px;
@@ -268,7 +270,7 @@ color: rgba(225, 19, 131, 1);
 
 .arrow-left,
 .arrow-right {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: auto;
@@ -278,7 +280,7 @@ color: rgba(225, 19, 131, 1);
   width: 40px;
   color: rgba(225, 19, 131, 1);
   transition: all 600ms ease-in-out;
-  background: linear-gradient(to left, transparent 0%, black 800%);
+  background: none;
   cursor: pointer;
   border: none;
 }
@@ -292,5 +294,5 @@ color: rgba(225, 19, 131, 1);
   right: 0;
   left: auto;
   text-align: right;
-  background: linear-gradient(to right, transparent 0%, black 800%);
+  background: none;
 }
