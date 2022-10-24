@@ -4,6 +4,7 @@ import Destaquebycat from "./Components/Destaquebycat";
 import { getcategories, getproducts } from "./Api_controll/ApiConnections";
 import "./App.css";
 import Header from "./Components/Header";
+import Appbotton from "./Components/Appbotton";
 
 function App() {
   const [categories, setcategories] = useState();
@@ -104,6 +105,7 @@ function App() {
             })
           : "carregando"}
       </div>
+      <Appbotton />
     </div>
   );
 }
