@@ -3,7 +3,7 @@ import rater from "../Extras/Starrater";
 
 const Productcard = (props) => {
   const { product } = props;
-  const porcento = (Number(product.promotional_price) / 100 * 90).toFixed(2)
+  const porcento = (Number(product.price) / 100 * 90).toFixed(2)
   const imgsrc = product.images_product.map((img) => {return img.path})
   
   return (
