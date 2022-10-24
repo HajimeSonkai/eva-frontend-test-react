@@ -11,14 +11,14 @@ https://eva-frontend-test-react.herokuapp.com/
 
 O site conta com algumas funções bem interessantes como:
 
-Menu Drop Down na <Nav>.
+Menu Drop Down na Nav.
 
-Slider de Backgrounds no <header>.
+Slider de Backgrounds no header.
 
 Menu Carrousel para os destaques de produtos
 Gerado diretamente com a resposta da API
-Escalavel, se a API retornar uma categoria com mais de 4 produtos o site gera um novo Destaque Carrousel.
+Escalável, se a API retornar uma categoria com mais de 4 produtos o site gera um novo Destaque Carrousel.
 
-Forms de Newsletters no <botton> com regex e alerta para forms enviado e não enviado.
+Forms de Newsletters no botton com regex e alerta para forms enviado e não enviado.
 
 Site Responsivo com versão para mobile.
